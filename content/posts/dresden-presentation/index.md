@@ -1,7 +1,7 @@
 ---
 title: "Using Stochastic Models to Compute Information Rates"
 date: 2021-09-13
-draft: true
+draft: false
 categories: ["presentations"]
 ---
 
