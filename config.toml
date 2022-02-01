@@ -1,6 +1,6 @@
 baseURL = 'https://site.manuel-rhdt.de/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Manuel Reinhardt'
 copyright = "© Manuel Reinhardt 2022"
 theme = 'minima'
 

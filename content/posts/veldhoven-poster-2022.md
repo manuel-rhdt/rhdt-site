@@ -1,5 +1,5 @@
 ---
-title: "Calculating the Information Transmission Rate for (almost) any System"
+title: "Poster: Calculating the Information Transmission Rate for (almost) any System"
 author: ["Manuel Reinhardt", "Gašper Tkačik", "Pieter Rein ten Wolde"]
 date: 2022-01-26
 draft: false
