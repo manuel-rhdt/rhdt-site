@@ -11,7 +11,7 @@ unsafe= true
 [author]
 name = "Manuel Reinhardt"
 slogon = ""
-description = ""
+description = "I am a PhD-student in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems. Specifically, in my PhD I am studying the thermodynamics of polymer copying which is one of the essential ingredients of life, required not only for DNA replication, but also for gene expression through transcription and translation. My work combines information theory and (stochastic) thermodynamics with computational methods from soft condensed matter physics to investigate the thermodynamic cost of copying. "
 
 [params]
 # iam is the beginning words of your self-introduction.
