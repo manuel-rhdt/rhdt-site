@@ -9,13 +9,13 @@ theme = 'minima'
 unsafe= true
 
 [author]
-name = "Manuel Reinhardt"
+name = "Manuel Reinhardt,"
 slogon = ""
-description = "I am a PhD-student in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems. Specifically, in my PhD I am studying the thermodynamics of polymer copying which is one of the essential ingredients of life, required not only for DNA replication, but also for gene expression through transcription and translation. My work combines information theory and (stochastic) thermodynamics with computational methods from soft condensed matter physics to investigate the thermodynamic cost of copying. "
+description = "a PhD-student at AMOLF (Amsterdam) in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems. Specifically, in my PhD I am studying the thermodynamics of polymer copying which is one of the essential ingredients of life, required not only for DNA replication, but also for gene expression through transcription and translation. My work combines information theory and (stochastic) thermodynamics with computational methods from soft condensed matter physics to investigate the thermodynamic cost of copying. "
 
 [params]
 # iam is the beginning words of your self-introduction.
-iam = ""
+iam = "I am"
 # The subtitle will be shown after the title of your blog site.
 # e.g. "title - subtitle".
 subtitle = ""
@@ -23,9 +23,9 @@ subtitle = ""
 # e.g. disqus, utterances, ovo.
 comment = ""
 # Timeformat, no matter what format to use, make it the second day of Jan. 2006
-timeformat = "Jan 02, 2006"
+timeformat = "02-01-2006"
 # switch for turning on/off lights.
-switch = ["☀️", "🌙"]
+switch = ["🌙", "☀️"]
 # default theme. e.g. light, dark, system
 defaultTheme = "system"
 # If set true, date of posts will be shown in the homepage.

@@ -7,4 +7,6 @@ categories: ["posters"]
 description: "Poster presented at conference Physics@Veldhoven 2022"
 ---
 
-[Poster PDF](/reinhardt_poster_2022.pdf)
+[Download the Poster as PDF](/reinhardt_poster_2022.pdf)
+
+[![Poster](/poster_veldhoven_2022.png)](/poster_veldhoven_2022_full.png)
