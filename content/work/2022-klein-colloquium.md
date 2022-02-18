@@ -1,6 +1,8 @@
 ---
 title: "Presentation: Computing the Information Flow Through Complex Systems"
 date: 2022-02-07
+categories: 
+  - presentation
 draft: false
 description: "Oral presentation held at internal AMOLF “Klein Colloquium”"
 ---

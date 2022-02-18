@@ -11,7 +11,7 @@ unsafe= true
 [author]
 name = "Manuel Reinhardt,"
 slogon = ""
-description = "a PhD-student at AMOLF (Amsterdam) in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems. Specifically, in my PhD I am studying the thermodynamics of polymer copying which is one of the essential ingredients of life, required not only for DNA replication, but also for gene expression through transcription and translation. My work combines information theory and (stochastic) thermodynamics with computational methods from soft condensed matter physics to investigate the thermodynamic cost of copying. "
+description = "a PhD-student at [AMOLF](https://amolf.nl) (Amsterdam) in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems. Specifically, in my PhD I am studying the thermodynamics of polymer copying which is one of the essential ingredients of life, required not only for DNA replication, but also for gene expression through transcription and translation. My work combines information theory and (stochastic) thermodynamics with computational methods from soft condensed matter physics to investigate the thermodynamic cost of copying. "
 
 [params]
 # iam is the beginning words of your self-introduction.
@@ -40,3 +40,24 @@ globalFontFamily = ""
 commentOnAllPosts = true
 # toc decides the shape of the toc button. e.g. default, lines, bar
 toc = "lines"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Presentations"
+url = "/categories/presentation"
+weight = 2
+[[menu.main]]
+name = "Posters"
+url = "/categories/poster"
+weight = 3
+
+[[params.social]]
+name = "github"  
+url = "https://github.com/manuel-rhdt"
+svg = ""
+
+[taxonomies]
+category = "categories"

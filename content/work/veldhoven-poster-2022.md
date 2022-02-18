@@ -3,7 +3,7 @@ title: "Poster: Calculating the Information Transmission Rate for (almost) any S
 author: ["Manuel Reinhardt", "Gašper Tkačik", "Pieter Rein ten Wolde"]
 date: 2022-01-26
 draft: false
-categories: ["posters"]
+categories: ["poster"]
 description: "Poster presented at conference Physics@Veldhoven 2022"
 ---
 
