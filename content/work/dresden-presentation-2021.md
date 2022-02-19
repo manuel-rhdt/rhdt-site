@@ -1,7 +1,8 @@
 ---
-title: "Presentation: Using Stochastic Models to Compute Information Rates"
+title: "Using Stochastic Models to Compute Information Rates"
 date: 2021-09-13
 draft: false
+location: "Physical Biology Circle Meeting, MPI-PKS Dresden"
 categories: ["presentation"]
 ---
 

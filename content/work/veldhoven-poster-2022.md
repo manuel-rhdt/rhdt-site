@@ -1,6 +1,7 @@
 ---
-title: "Poster: Calculating the Information Transmission Rate for (almost) any System"
+title: "Calculating the Information Transmission Rate for (almost) any System"
 author: ["Manuel Reinhardt", "Gašper Tkačik", "Pieter Rein ten Wolde"]
+location: "Physics@Veldhoven 2022, virtual conference"
 date: 2022-01-26
 draft: false
 categories: ["poster"]

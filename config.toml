@@ -23,7 +23,7 @@ subtitle = ""
 # e.g. disqus, utterances, ovo.
 comment = ""
 # Timeformat, no matter what format to use, make it the second day of Jan. 2006
-timeformat = "02-01-2006"
+timeformat = "2 Jan 2006"
 # switch for turning on/off lights.
 switch = ["🌙", "☀️"]
 # default theme. e.g. light, dark, system
