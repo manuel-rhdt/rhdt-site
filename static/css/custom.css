@@ -1,0 +1,14 @@
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.max-w-100 {
+    max-width: 100%;
+}
+
+.min-w-300p {
+    max-width: 300px;
+}

@@ -41,17 +41,20 @@ commentOnAllPosts = true
 # toc decides the shape of the toc button. e.g. default, lines, bar
 toc = "lines"
 
+# Custom CSS
+custom_css = ["css/custom.css"]
+
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
 [[menu.main]]
 name = "Presentations"
-url = "/categories/presentation"
+url = "/presentation"
 weight = 2
 [[menu.main]]
 name = "Posters"
-url = "/categories/poster"
+url = "/poster"
 weight = 3
 
 [[params.social]]

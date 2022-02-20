@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main>
+	<h2 class="my-8">{{ .Title }}</h2>
+	<div class="mt-8 flex-row justify-between">
+		{{ range .Pages }}
+        <a href="{{ .RelPermalink }}">
+        {{ $title := .Title }}
+		{{ with .Resources.GetMatch "poster.png" }}
+            <div class="my-4 min-w-300p">
+                <div class="mb-2">{{ $title }}</div>
+                {{ partial "responsive" . }}
+            </div>
+        {{ end }}
+        </a>
+		{{ end }}
+	</div>
+</main>
+{{ end }}
