@@ -1,0 +1,32 @@
+{{/* get file that matches the filename as specified as src="" in shortcode */}}
+{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+
+{{ $tinyw := default "500x" }}
+{{ $smallw := default "1000x" }}
+{{ $mediumw := default "1500x" }}
+
+{{/* resize the src image to the given sizes */}}
+
+{{ $tiny :=  ($src.Resize $tinyw) }}
+{{ $small := ($src.Resize $smallw) }}
+{{ $medium := ($src.Resize $mediumw) }}
+
+
+{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
+
+<img width="500px" class="slide"
+  srcset='
+  {{ if ge $src.Width "200" }}
+    {{ with $tiny.RelPermalink }}{{.}} 1x{{ end }}
+  {{ end }}
+  {{ if ge $src.Width "400" }}
+    {{ with $small.RelPermalink }}, {{.}} 2x{{ end }}
+  {{ end }}
+  {{ if ge $src.Width "600" }}
+    {{ with $medium.RelPermalink }}, {{.}} 3x{{ end }}
+  {{ end }}'
+  {{ with .Get "alt" }}
+    alt="{{.}}"
+  {{ else }}
+    alt=""
+  {{ end }} />
