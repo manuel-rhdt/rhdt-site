@@ -30,7 +30,7 @@
     {{ with $medium.RelPermalink }}, {{.}} 1280w{{ end }}
   {{ end }}
   {{ if ge $src.Width "1920" }}
-    {{ with $medium.RelPermalink }}, {{.}} 1920w{{ end }}
+    {{ with $large.RelPermalink }}, {{.}} 1920w{{ end }}
   {{ end }}'
   {{ if .Get (print $medium) }}
     src="{{ $medium.RelPermalink }}" 
