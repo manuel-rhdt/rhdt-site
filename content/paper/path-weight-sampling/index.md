@@ -13,7 +13,7 @@ Published in [Phys. Rev. X **13**, 041017](https://doi.org/10.1103/PhysRevX.13.0
 
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="155802754"></div>
 
-{{< img src="pws_key_image_large.png" alt="Teaser image" >}}
+{{< img src="pws_key_image_large960.png" alt="Teaser image" >}}
 
 # Abstract
 
