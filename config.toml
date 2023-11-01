@@ -62,6 +62,10 @@ url = "/poster"
 weight = 4
 
 [[params.social]]
+name = "twitter"  
+url = "https://twitter.com/manuel_rhdt"
+svg = ""
+[[params.social]]
 name = "github"  
 url = "https://github.com/manuel-rhdt"
 svg = ""
