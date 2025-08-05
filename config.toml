@@ -1,7 +1,7 @@
 baseURL = 'https://site.manuel-rhdt.de/'
 languageCode = 'en-us'
 title = 'Manuel Reinhardt'
-copyright = "© Manuel Reinhardt 2023"
+copyright = "© Manuel Reinhardt 2025"
 theme = 'minima'
 
 # Allow raw HTML in Markdown
@@ -61,10 +61,7 @@ name = "Posters"
 url = "/poster"
 weight = 4
 
-[[params.social]]
-name = "twitter"  
-url = "https://twitter.com/manuel_rhdt"
-svg = ""
+
 [[params.social]]
 name = "github"  
 url = "https://github.com/manuel-rhdt"
