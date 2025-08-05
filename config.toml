@@ -9,13 +9,13 @@ theme = 'minima'
 unsafe= true
 
 [author]
-name = "Manuel Reinhardt,"
+name = "Manuel Reinhardt"
 slogon = ""
-description = "a PhD-student at [AMOLF](https://amolf.nl) (Amsterdam) in the group of Pieter Rein ten Wolde. My primary research interest is understanding  thermodynamic and biological constraints of information processing in living systems."
+description = "I have a PhD in Physics with a focus in computational modeling and Monte Carlo simulations. I worked at [AMOLF](https://amolf.nl) (Amsterdam) in the group of Pieter Rein ten Wolde."
 
 [params]
 # iam is the beginning words of your self-introduction.
-iam = "I am"
+iam = "Hi, I'm"
 # The subtitle will be shown after the title of your blog site.
 # e.g. "title - subtitle".
 subtitle = ""
