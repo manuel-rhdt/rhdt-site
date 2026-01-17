@@ -65,13 +65,6 @@
 			{{ partial "list.html" . }}
 			{{ end }}
 			{{ partial "paginator.html" . }}
-			<!-- {{ $publications := where .Site.RegularPages "Section" "publication" }}
-			{{ range first 3 $publications }}
-			<div class="cv-pub">
-				<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-				<span class="cv-pub-meta">{{ .Params.author | default (slice .Site.Author.name) | delimit ", " }} • {{ .Params.location }} • {{ .Date.Format "2006" }}</span>
-			</div>
-			{{ end }} -->
 			<div class="mt-4">
 				<a href="/publication">View all publications →</a>
 			</div>
