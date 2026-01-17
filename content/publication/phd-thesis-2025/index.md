@@ -1,5 +1,7 @@
 ---
-title: "Defended my PhD Thesis: Quantifying the Flow of Information"
+title: "PhD Thesis: Quantifying the Flow of Information"
+author: ["Manuel Reinhardt"]
+location: "Vrije Universiteit Amsterdam"
 date: 2025-06-13
 draft: false
 description: "I successfully defended my PhD thesis."
