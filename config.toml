@@ -11,7 +11,7 @@ unsafe= true
 [author]
 name = "Manuel Reinhardt"
 slogon = ""
-description = "I have a PhD in Physics with a focus in computational modeling and Monte Carlo simulations. I worked at [AMOLF](https://amolf.nl) (Amsterdam) in the group of Pieter Rein ten Wolde."
+description = "PhD in Physics (*cum laude*) specializing in computational modeling, Monte Carlo simulations, and information theory. Former researcher at [AMOLF](https://amolf.nl) Amsterdam in the Biochemical Networks group."
 
 [params]
 # iam is the beginning words of your self-introduction.
