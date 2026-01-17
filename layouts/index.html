@@ -1,0 +1,76 @@
+{{ define "main" }}
+	<main>
+		<h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
+		<p class="my-3 home-intro">{{ .Site.Author.description | markdownify | safeHTML }}</p>
+
+		<!-- Education Section -->
+		<section class="cv-section">
+			<h3 class="mt-8 mb-4">Education</h3>
+			<div class="cv-entry">
+				<div class="cv-header">
+					<strong>PhD in Physics</strong>
+					<span class="cv-date">2019 - 2025</span>
+				</div>
+				<div class="cv-org">Vrije Universiteit Amsterdam / AMOLF</div>
+				<div class="cv-details">
+					Thesis: <em>Quantifying the Flow of Information</em><br>
+					Supervisors: Prof. Pieter Rein ten Wolde, Prof. Gašper Tkačik<br>
+					Developed novel Monte Carlo methods for computing information transmission in stochastic systems
+				</div>
+			</div>
+		</section>
+
+		<!-- Research Experience Section -->
+		<section class="cv-section">
+			<h3 class="mt-8 mb-4">Research Experience</h3>
+			<div class="cv-entry">
+				<div class="cv-header">
+					<strong>PhD Researcher</strong>
+					<span class="cv-date">2019 - 2025</span>
+				</div>
+				<div class="cv-org">AMOLF Amsterdam, Biochemical Networks Group</div>
+				<div class="cv-details">
+					• Developed Path Weight Sampling (PWS) framework for exact computation of trajectory mutual information<br>
+					• Applied computational methods to bacterial chemotaxis (182-reaction system)<br>
+					• Created machine learning approaches for data-driven information quantification<br>
+					• Published in Physical Review X and multiple preprints
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section class="cv-section">
+			<h3 class="mt-8 mb-4">Skills</h3>
+			<div class="cv-skills">
+				<div class="skill-category">
+					<strong>Programming:</strong> Julia, Python, Rust, MATLAB
+				</div>
+				<div class="skill-category">
+					<strong>Computational Methods:</strong> Monte Carlo simulation, MCMC, Particle filtering, Machine learning, Statistical physics
+				</div>
+				<div class="skill-category">
+					<strong>Research Areas:</strong> Information theory, Stochastic processes, Computational biology, Biochemical networks
+				</div>
+				<div class="skill-category">
+					<strong>Tools:</strong> Git, LaTeX, Jupyter, Neural networks, Scientific computing
+				</div>
+			</div>
+		</section>
+
+		<!-- Selected Publications Section -->
+		<section class="cv-section">
+			<h3 class="mt-8 mb-4">Selected Publications</h3>
+			{{ $publications := where .Site.RegularPages "Section" "publication" }}
+			{{ range first 3 $publications }}
+			<div class="cv-pub">
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+				<span class="cv-pub-meta">{{ .Params.author | default (slice .Site.Author.name) | delimit ", " }} • {{ .Params.location }} • {{ .Date.Format "2006" }}</span>
+			</div>
+			{{ end }}
+			<div class="mt-4">
+				<a href="/publication">View all publications →</a>
+			</div>
+		</section>
+
+	</main>
+{{ end }}
