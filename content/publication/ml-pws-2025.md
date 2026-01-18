@@ -2,6 +2,7 @@
 title: "ML-PWS: Estimating the Mutual Information Between Experimental Time Series Using Neural Networks"
 author: ["Manuel Reinhardt", "Gašper Tkačik", "Pieter Rein ten Wolde"]
 location: "arXiv (under review in Phys. Rev. Lett.)"
+fulltext_link: https://arxiv.org/abs/2508.16509
 date: 2025-08-25
 draft: false
 description: "A machine learning technique that employs neural networks to develop generative models from experimental time-series data, combined with Path Weight Sampling to obtain the information rate."

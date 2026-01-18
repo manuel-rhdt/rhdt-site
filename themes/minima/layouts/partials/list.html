@@ -8,7 +8,11 @@
       {{ end }}
     </div>
     {{ $params := .Page.Params }}
-    <div class="mt-1 text-sm">{{ .Type | humanize }} at <em>{{ $params.Location }}</em></div>
+    {{ range $category := $params.Categories }}
+      {{ with ($.Site.GetPage (printf "/%s" $category)) }}
+        <div class="mt-1 text-sm">{{ .Data.Term | humanize }} at <em>{{ $params.Location }}</em></div>
+      {{ end }}
+    {{ end }}
   </div>
   {{ if .Site.Params.displayDate }}
   <div class="sm:mb-2 sm:text-sm whitespace-nowrap">

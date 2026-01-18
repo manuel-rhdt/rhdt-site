@@ -1,7 +1,7 @@
 baseURL = 'https://site.manuel-rhdt.de/'
 languageCode = 'en-us'
 title = 'Manuel Reinhardt'
-copyright = "© Manuel Reinhardt 2025"
+copyright = "© Manuel Reinhardt 2026"
 theme = 'minima'
 
 # Allow raw HTML in Markdown

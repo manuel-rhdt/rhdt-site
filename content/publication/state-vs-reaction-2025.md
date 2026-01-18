@@ -3,6 +3,7 @@ title: "State- versus Reaction-Based Information Processing in Biochemical Netwo
 author: ["Anne-Lena Moor", "Age Tjalma", "Manuel Reinhardt", "Pieter Rein ten Wolde", "Christoph Zechner"]
 location: "arXiv (under review in Phys. Rev. Lett.)"
 date: 2025-05-13
+fulltext_link: https://arxiv.org/abs/2505.13373
 draft: false
 description: "Introduces the notion of reaction- versus state-based descriptions of trajectories in biochemical systems, showing how different trajectory descriptions affect information content."
 ---

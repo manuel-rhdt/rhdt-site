@@ -1,7 +1,8 @@
 ---
-title: "Mutual Information Rate -- Linear Noise Approximation and Exact Computation"
+title: "Mutual Information Rate – Linear Noise Approximation and Exact Computation"
 author: ["Manuel Reinhardt", "Age J. Tjalma", "Anne-Lena Moor", "Christoph Zechner", "Pieter Rein ten Wolde"]
 location: "arXiv"
+fulltext_link: https://arxiv.org/abs/2508.21220
 date: 2025-08-21
 draft: false
 description: "A systematic assessment of the widely-used Gaussian approximation for estimating mutual information rate, revealing when it fails and when exact methods like PWS are necessary."

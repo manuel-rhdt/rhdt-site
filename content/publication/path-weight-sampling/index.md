@@ -4,6 +4,7 @@ author: ["Manuel Reinhardt", "Gašper Tkačik", "Pieter Rein ten Wolde"]
 location: "Physical Review X"
 date: 2023-10-26
 draft: false
+fulltext_link: https://doi.org/10.1103/PhysRevX.13.041017
 description: "The information transmission rate of a system can usually be calculated only approximately. A new Monte Carlo simulation scheme makes it possible, for the first time, to do so exactly for a large class of systems."
 ---
 

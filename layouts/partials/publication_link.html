@@ -1,0 +1,7 @@
+{{- if .fulltext_link }}
+<a href="{{ .fulltext_link }}" style="text-decoration: underline;">
+{{- end}}
+{{ .location }}
+{{- if.fulltext_link }}
+</a>
+{{- end }}
