@@ -42,7 +42,7 @@ commentOnAllPosts = true
 toc = "lines"
 
 # Custom CSS
-custom_css = ["css/custom.css"]
+custom_css = ["/css/custom.css"]
 
 [[menu.main]]
 name = "Home"

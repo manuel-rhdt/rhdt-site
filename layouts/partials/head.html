@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . }}">
   {{- end }}
 
   {{ $options = (dict "targetPath" (printf `minima.%d.js` $hash) "minify" true) }}
