@@ -23,7 +23,7 @@
     rel="stylesheet">
   {{ $hash := now.Unix }}
   {{ $options := (dict "targetPath" (printf `minima.%d.css` $hash) "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options }}
+  {{ $style := resources.Get "sass/main.scss" | css.Sass $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ range .Site.Params.custom_css -}}

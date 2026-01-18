@@ -8,10 +8,10 @@ theme = 'minima'
 [markup.goldmark.renderer]
 unsafe= true
 
-[author]
+[params.author]
 name = "Manuel Reinhardt"
 slogon = ""
-description = "PhD in Physics (*cum laude*) specializing in computational modeling, Monte Carlo simulations, and information theory. Former researcher at [AMOLF](https://amolf.nl) Amsterdam in the Biochemical Networks group."
+description = "PhD in Physics specializing in computational modeling, Monte Carlo simulations, and information theory. Former researcher at [AMOLF](https://amolf.nl) Amsterdam in the Biochemical Networks group."
 
 [params]
 # iam is the beginning words of your self-introduction.
@@ -60,6 +60,10 @@ weight = 3
 name = "Posters"
 url = "/poster"
 weight = 4
+[[menu.main]]
+name = "CV"
+url = "/cv"
+weight = 5
 
 
 [[params.social]]

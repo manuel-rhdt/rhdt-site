@@ -1,171 +1,19 @@
 {{ define "main" }}
 	<main>
-		<h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Author.name }}</h2>
-		<p class="my-3 home-intro">{{ .Site.Author.description | markdownify | safeHTML }}</p>
+		<h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Params.Author.name }}</h2>
+		<p class="my-3 home-intro">{{ .Site.Params.Author.description | markdownify | safeHTML }}</p>
 
-		<!-- Education Section -->
-		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Education</h3>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>PhD in Physics</strong>
-					<span class="cv-date">2020 - 2024</span>
-				</div>
-				<div class="cv-org">Vrije Universiteit Amsterdam / AMOLF</div>
-				<div class="cv-details">
-					Thesis: <em>Quantifying the Flow of Information</em> (defended June 13, 2025)<br>
-					Graduated <em>cum laude</em><br>
-					Promotor: Prof. Pieter Rein ten Wolde, Copromotor: Prof. Gašper Tkačik
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Master of Science in Physics</strong>
-					<span class="cv-date">2018 - 2020</span>
-				</div>
-				<div class="cv-org">Ludwig-Maximilians-Universität (LMU), Munich</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Bachelor of Science in Physics</strong>
-					<span class="cv-date">2014 - 2018</span>
-				</div>
-				<div class="cv-org">Ludwig-Maximilians-Universität (LMU), Munich</div>
-				<div class="cv-details">
-					Erasmus exchange semester at Universidad Autónoma de Madrid, Spain (2016)
-				</div>
-			</div>
-		</section>
-
-		<!-- Research Experience Section -->
-		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Research Experience</h3>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Junior Researcher, Biophysics</strong>
-					<span class="cv-date">2024 - 2025</span>
-				</div>
-				<div class="cv-org">AMOLF, Amsterdam</div>
-				<div class="cv-details">
-					Applying ML-PWS to neuronal data
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>PhD Researcher, Biophysics</strong>
-					<span class="cv-date">2020 - 2024</span>
-				</div>
-				<div class="cv-org">AMOLF, Amsterdam - Biochemical Networks Group</div>
-				<div class="cv-details">
-					<strong>Main achievements:</strong><br>
-					• Developed PWS, the first exact algorithm for computing the information transmission rate<br>
-					• Testing and evaluation of PWS on realistic problems including bacterial chemotaxis (182-reaction system)<br>
-					• Pioneered a Machine Learning approach (ML-PWS) to apply PWS to experimental data<br>
-					• Published in Physical Review X and submitted articles to high-impact journals<br>
-					• Presented work at national and international conferences<br>
-					<br>
-					<strong>Nov-Dec 2023:</strong> Research stay at IST Austria collaborating with Gašper Tkačik's group on neuronal data analysis
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Research Internship</strong>
-					<span class="cv-date">2019 - 2020</span>
-				</div>
-				<div class="cv-org">AMOLF, Amsterdam</div>
-				<div class="cv-details">
-					Master's thesis research: Developing Monte-Carlo simulations for analyzing information transmission and processing efficiency in cell signaling
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Design and Implementation of Digital Language Course "SpanishIN"</strong>
-					<span class="cv-date">2018</span>
-				</div>
-				<div class="cv-org">LMU, Munich</div>
-				<div class="cv-details">
-					Developed Moodle-based digital learning platform for university-level Spanish students
-				</div>
-			</div>
-		</section>
-
-		<!-- Teaching Section -->
-		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Teaching</h3>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Teaching Assistant, Master Course</strong>
-					<span class="cv-date">2021 - 2022</span>
-				</div>
-				<div class="cv-org">Vrije Universiteit, Amsterdam</div>
-				<div class="cv-details">
-					Course: Soft Condensed Matter Physics and Biological Physics
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Teaching Assistant, 1st Year Course</strong>
-					<span class="cv-date">2017 - 2018</span>
-				</div>
-				<div class="cv-org">LMU, Munich</div>
-				<div class="cv-details">
-					Course: Mathematical Methods for Physicists
-				</div>
-			</div>
-			<div class="cv-entry">
-				<div class="cv-header">
-					<strong>Physics Lab Supervisor</strong>
-					<span class="cv-date">2015 - 2016</span>
-				</div>
-				<div class="cv-org">LMU, Munich</div>
-				<div class="cv-details">
-					Supervised physics lab for medical students
-				</div>
-			</div>
-		</section>
-
-		<!-- Languages Section -->
-		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Languages</h3>
-			<div class="cv-skills">
-				<div class="skill-category">
-					<strong>German:</strong> Native speaker
-				</div>
-				<div class="skill-category">
-					<strong>Spanish:</strong> Native speaker
-				</div>
-				<div class="skill-category">
-					<strong>English:</strong> Very good (C1/C2)
-				</div>
-				<div class="skill-category">
-					<strong>Dutch:</strong> Good (B2)
-				</div>
-			</div>
-		</section>
-
-		<!-- Skills Section -->
-		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Technical Skills</h3>
-			<div class="cv-skills">
-				<div class="skill-category">
-					<strong>Programming:</strong> Julia, Python, Rust, MATLAB
-				</div>
-				<div class="skill-category">
-					<strong>Computational Methods:</strong> Monte Carlo simulation, MCMC, Particle filtering, Machine learning, Statistical physics
-				</div>
-				<div class="skill-category">
-					<strong>Research Areas:</strong> Information theory, Stochastic processes, Computational biology, Biochemical networks
-				</div>
-				<div class="skill-category">
-					<strong>Tools:</strong> Git, LaTeX, Jupyter, Moodle, Scientific computing
-				</div>
-			</div>
-		</section>
+		<main>
+			<p>{{ .Description | markdownify | safeHTML }}</p>
+			<article class="md">
+				{{ .Content }}
+			</article>
+		</main>
 
 		<!-- Selected Publications Section -->
 		<section class="cv-section">
-			<h3 class="mt-8 mb-4">Recent Work</h3>
-			{{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
+			<h3 class="mt-8 mb-4">Selected Publications</h3>
+			{{ $paginator := .Paginate (where .Site.RegularPages "Type" "publication") }}
 			{{ range $paginator.Pages }}
 			{{ partial "list.html" . }}
 			{{ end }}
