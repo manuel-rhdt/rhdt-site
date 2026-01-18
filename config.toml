@@ -1,17 +1,17 @@
 baseURL = 'https://site.manuel-rhdt.de/'
 languageCode = 'en-us'
 title = 'Manuel Reinhardt'
-copyright = "© Manuel Reinhardt 2025"
+copyright = "© Manuel Reinhardt 2026"
 theme = 'minima'
 
 # Allow raw HTML in Markdown
 [markup.goldmark.renderer]
 unsafe= true
 
-[author]
+[params.author]
 name = "Manuel Reinhardt"
 slogon = ""
-description = "I have a PhD in Physics with a focus in computational modeling and Monte Carlo simulations. I worked at [AMOLF](https://amolf.nl) (Amsterdam) in the group of Pieter Rein ten Wolde."
+description = "PhD in Physics specializing in computational modeling, Monte Carlo simulations, and information theory. Former researcher at [AMOLF](https://amolf.nl) Amsterdam in the Biochemical Networks group."
 
 [params]
 # iam is the beginning words of your self-introduction.
@@ -42,7 +42,7 @@ commentOnAllPosts = true
 toc = "lines"
 
 # Custom CSS
-custom_css = ["css/custom.css"]
+custom_css = ["/css/custom.css"]
 
 [[menu.main]]
 name = "Home"
@@ -60,6 +60,10 @@ weight = 3
 name = "Posters"
 url = "/poster"
 weight = 4
+[[menu.main]]
+name = "CV"
+url = "/cv"
+weight = 5
 
 
 [[params.social]]

@@ -1,0 +1,30 @@
+{{ define "main" }}
+	<main>
+		<h2 class="mt-8 mb-1">{{ .Site.Params.iam }} {{ .Site.Params.Author.name }}</h2>
+		<p class="my-3 home-intro">{{ .Site.Params.Author.description | markdownify | safeHTML }}</p>
+
+		<main>
+			<p>{{ .Description | markdownify | safeHTML }}</p>
+			<article class="md">
+				{{ .Content }}
+			</article>
+		</main>
+
+		<!-- Selected Publications Section -->
+		<section class="cv-section">
+			<h3 class="mt-8 mb-4">Selected Publications</h3>
+			{{ $publications := where .Site.RegularPages "Section" "publication" }}
+			{{ range first 3 $publications }}
+			<div class="cv-pub">
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+				<span class="cv-pub-meta">{{ partial "authors.html" .Params.author }} • {{ partial "publication_link.html" .Params }} • {{ .Date.Format "2006" }}</span>
+			</div>
+			{{ end }}
+			{{ partial "paginator.html" . }}
+			<div class="mt-4">
+				<a href="/publication">View all publications →</a>
+			</div>
+		</section>
+
+	</main>
+{{ end }}

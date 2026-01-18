@@ -1,6 +1,9 @@
 ---
-title: "Defended my PhD Thesis: Quantifying the Flow of Information"
+title: "PhD Thesis: Quantifying the Flow of Information"
+author: ["Manuel Reinhardt"]
+location: "Vrije Universiteit Amsterdam"
 date: 2025-06-13
+fulltext_link: https://ir.amolf.nl/pub/11167
 draft: false
 description: "I successfully defended my PhD thesis."
 ---
