@@ -1,0 +1,83 @@
+{{ $palettes := site.Data.colors.palettes }}
+{{ $globalCss := `
+<style>
+.cp-wrap {
+  font-family: "IBM Plex Mono", "Fira Mono", "Courier New", monospace;
+  margin: 2rem 0;
+}
+.cp-palette {
+  margin-bottom: 2.5rem;
+}
+.cp-palette-name {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+.cp-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.cp-swatch {
+  flex: 1 1 80px;
+  min-width: 80px;
+}
+.cp-swatch-block {
+  height: 72px;
+  width: 100%;
+}
+.cp-swatch-info {
+  padding: 0.45rem 0.55rem;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+.cp-swatch-name {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cp-swatch-hex {
+  font-size: 0.6rem;
+  color: #999;
+  margin-top: 1px;
+}
+@media (prefers-color-scheme: dark) {
+  .cp-swatch-info { background: #1a1a1a; border-top-color: #2a2a2a; }
+  .cp-swatch-name { color: #ddd; }
+  .cp-swatch-hex  { color: #666; }
+  .cp-palette-name { color: #555; }
+}
+</style>
+` }}
+
+{{ if not (.Page.Scratch.Get "cp-css-done") }}
+  {{ .Page.Scratch.Set "cp-css-done" true }}
+  {{ $globalCss | safeHTML }}
+{{ end }}
+
+<div class="cp-wrap">
+{{ range $palettes }}
+  <div class="cp-palette">
+    {{ with .name }}<div class="cp-palette-name">{{ . }}</div>{{ end }}
+    <div class="cp-swatches">
+      {{ range .colors }}
+      <div class="cp-swatch">
+        <div class="cp-swatch-block" style="background-color: {{ .hex }};"></div>
+        <div class="cp-swatch-info">
+          <div class="cp-swatch-name">{{ .name }}</div>
+          <div class="cp-swatch-hex">{{ .hex }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
+</div>

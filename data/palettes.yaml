@@ -1,0 +1,38 @@
+palettes:
+
+  - name: Blues
+    colors:
+      - name: Midnight
+        hex: "#1B2A4A"
+      - name: Prussian
+        hex: "#1C3F6E"
+      - name: Steel
+        hex: "#4A7FB5"
+      - name: Powder
+        hex: "#A8C8E8"
+      - name: Ice
+        hex: "#DFF0FB"
+
+  - name: Neutrals
+    colors:
+      - name: Ink
+        hex: "#1A1A1A"
+      - name: Graphite
+        hex: "#4A4A4A"
+      - name: Ash
+        hex: "#9A9A9A"
+      - name: Fog
+        hex: "#D8D8D8"
+      - name: Paper
+        hex: "#F5F4F0"
+
+  - name: Accents
+    colors:
+      - name: Ember
+        hex: "#C94F2C"
+      - name: Ochre
+        hex: "#C8860A"
+      - name: Sage
+        hex: "#5A8A6A"
+      - name: Plum
+        hex: "#6A3F6E"
