@@ -1,38 +1,63 @@
 palettes:
 
-  - name: Blues
+  - name: Tol — Bright
     colors:
-      - name: Midnight
-        hex: "#1B2A4A"
-      - name: Prussian
-        hex: "#1C3F6E"
-      - name: Steel
-        hex: "#4A7FB5"
-      - name: Powder
-        hex: "#A8C8E8"
-      - name: Ice
-        hex: "#DFF0FB"
+      - { name: Blue,   hex: "#4477AA" }
+      - { name: Cyan,   hex: "#66CCEE" }
+      - { name: Green,  hex: "#228833" }
+      - { name: Yellow, hex: "#CCBB44" }
+      - { name: Red,    hex: "#EE6677" }
+      - { name: Purple, hex: "#AA3377" }
+      - { name: Grey,   hex: "#BBBBBB" }
 
-  - name: Neutrals
+  - name: Tol — Vibrant
     colors:
-      - name: Ink
-        hex: "#1A1A1A"
-      - name: Graphite
-        hex: "#4A4A4A"
-      - name: Ash
-        hex: "#9A9A9A"
-      - name: Fog
-        hex: "#D8D8D8"
-      - name: Paper
-        hex: "#F5F4F0"
+      - { name: Orange,  hex: "#EE7733" }
+      - { name: Blue,    hex: "#0077BB" }
+      - { name: Cyan,    hex: "#33BBEE" }
+      - { name: Magenta, hex: "#EE3377" }
+      - { name: Red,     hex: "#CC3311" }
+      - { name: Teal,    hex: "#009988" }
+      - { name: Grey,    hex: "#BBBBBB" }
 
-  - name: Accents
+  - name: Tol — Muted
     colors:
-      - name: Ember
-        hex: "#C94F2C"
-      - name: Ochre
-        hex: "#C8860A"
-      - name: Sage
-        hex: "#5A8A6A"
-      - name: Plum
-        hex: "#6A3F6E"
+      - { name: Indigo,    hex: "#332288" }
+      - { name: Cyan,      hex: "#88CCEE" }
+      - { name: Teal,      hex: "#44AA99" }
+      - { name: Green,     hex: "#117733" }
+      - { name: Olive,     hex: "#999933" }
+      - { name: Sand,      hex: "#DDCC77" }
+      - { name: Rose,      hex: "#CC6677" }
+      - { name: Wine,      hex: "#882255" }
+      - { name: Purple,    hex: "#AA4499" }
+      - { name: Pale grey, hex: "#DDDDDD" }
+
+  - name: Tol — Pale
+    colors:
+      - { name: Pale blue,   hex: "#BBCCEE" }
+      - { name: Pale cyan,   hex: "#CCEEFF" }
+      - { name: Pale green,  hex: "#CCDDAA" }
+      - { name: Pale yellow, hex: "#EEEEBB" }
+      - { name: Pale red,    hex: "#FFCCCC" }
+      - { name: Pale grey,   hex: "#DDDDDD" }
+
+  - name: Tol — Dark
+    colors:
+      - { name: Dark blue,   hex: "#222255" }
+      - { name: Dark cyan,   hex: "#225555" }
+      - { name: Dark green,  hex: "#225522" }
+      - { name: Dark yellow, hex: "#666633" }
+      - { name: Dark red,    hex: "#663333" }
+      - { name: Dark grey,   hex: "#555555" }
+
+  - name: Okabe–Ito
+    colors:
+      - { name: Black,          hex: "#000000" }
+      - { name: Orange,         hex: "#E69F00" }
+      - { name: Sky blue,       hex: "#56B4E9" }
+      - { name: Bluish green,   hex: "#009E73" }
+      - { name: Yellow,         hex: "#F0E442" }
+      - { name: Blue,           hex: "#0072B2" }
+      - { name: Vermilion,      hex: "#D55E00" }
+      - { name: Reddish purple, hex: "#CC79A7" }
