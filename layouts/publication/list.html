@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main>
+	<h2 class="my-8">{{ .Title }}</h2>
+	<div class="mt-8 flex-row justify-between">
+		{{ range .Pages }}
+        <div class="cv-pub">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+            <span class="cv-pub-meta">{{ partial "authors.html" .Params.author }} • {{ partial "publication_link.html" .Params }} • {{ .Date.Format "2006" }}</span>
+        </div>
+		{{ end }}
+	</div>
+</main>
+{{ end }}
