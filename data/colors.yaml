@@ -1,6 +1,7 @@
 palettes:
 
   - name: Tol — Bright
+    key: tol-bright
     colors:
       - { name: Blue,   hex: "#4477AA" }
       - { name: Cyan,   hex: "#66CCEE" }
@@ -11,6 +12,7 @@ palettes:
       - { name: Grey,   hex: "#BBBBBB" }
 
   - name: Tol — Vibrant
+    key: tol-vibrant
     colors:
       - { name: Orange,  hex: "#EE7733" }
       - { name: Blue,    hex: "#0077BB" }
@@ -21,6 +23,7 @@ palettes:
       - { name: Grey,    hex: "#BBBBBB" }
 
   - name: Tol — Muted
+    key: tol-muted
     colors:
       - { name: Indigo,    hex: "#332288" }
       - { name: Cyan,      hex: "#88CCEE" }
@@ -34,6 +37,7 @@ palettes:
       - { name: Pale grey, hex: "#DDDDDD" }
 
   - name: Tol — Pale
+    key: tol-pale
     colors:
       - { name: Pale blue,   hex: "#BBCCEE" }
       - { name: Pale cyan,   hex: "#CCEEFF" }
@@ -43,6 +47,7 @@ palettes:
       - { name: Pale grey,   hex: "#DDDDDD" }
 
   - name: Tol — Dark
+    key: tol-dark
     colors:
       - { name: Dark blue,   hex: "#222255" }
       - { name: Dark cyan,   hex: "#225555" }
@@ -52,6 +57,7 @@ palettes:
       - { name: Dark grey,   hex: "#555555" }
 
   - name: Okabe–Ito
+    key: okabe-ito
     colors:
       - { name: Black,          hex: "#000000" }
       - { name: Orange,         hex: "#E69F00" }
@@ -61,3 +67,25 @@ palettes:
       - { name: Blue,           hex: "#0072B2" }
       - { name: Vermilion,      hex: "#D55E00" }
       - { name: Reddish purple, hex: "#CC79A7" }
+
+  - name: ok6 cycle
+    key: ok6
+    colors:
+      - { name: Navy, hex: "#1D5E85" }
+      - { name: Gold, hex: "#C8B222" }
+      - { name: Brown, hex: "#8B3E09" }
+      - { name: Pink, hex: "#F487C5" }
+      - { name: Green, hex: "#469172" }
+      - { name: Violet, hex: "#A351FB" }
+
+  - name: ok8 cycle
+    key: ok8
+    colors:
+      - { name: Navy, hex: "#2A5B88" }
+      - { name: Gold, hex: "#D6AB1B" }
+      - { name: Rust, hex: "#8E3B1C" }
+      - { name: Violet, hex: "#A936FB" }
+      - { name: Mint, hex: "#4FBC90" }
+      - { name: Pink, hex: "#F87FD8" }
+      - { name: Teal, hex: "#228A8F" }
+      - { name: Coral, hex: "#D0603D" }

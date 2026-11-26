@@ -1,0 +1,55 @@
+{{ $maps := site.Data.colormaps.colormaps }}
+{{ if not (.Page.Scratch.Get "cm-css-done") }}
+{{ .Page.Scratch.Set "cm-css-done" true }}
+<style>
+.cm-wrap {
+  font-family: "IBM Plex Mono", "Fira Mono", "Courier New", monospace;
+  margin: 2rem 0;
+}
+.cm-row {
+  margin-bottom: 1.1rem;
+}
+.cm-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  margin-bottom: 0.3rem;
+}
+.cm-name { font-weight: 600; color: #333; }
+.cm-meta { color: #999; }
+.cm-bar {
+  height: 36px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.cm-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: #999;
+  margin-top: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  .cm-name { color: #ddd; }
+  .cm-meta, .cm-ends { color: #666; }
+}
+</style>
+{{ end }}
+
+<div class="cm-wrap">
+{{ range $maps }}
+  {{ $n := len .stops }}
+  <div class="cm-row">
+    <div class="cm-label">
+      <span class="cm-name">{{ .name }}</span>
+      <span class="cm-meta">{{ .kind }} · OKLab L {{ index .L 0 }} → {{ index .L 2 }}</span>
+    </div>
+    <div class="cm-bar" style="background: linear-gradient(to right, {{ delimit .stops ", " | safeCSS }});"></div>
+    <div class="cm-ends">
+      <span>{{ index .stops 0 }}</span>
+      <span>{{ index .stops (div (sub $n 1) 2) }}</span>
+      <span>{{ index .stops (sub $n 1) }}</span>
+    </div>
+  </div>
+{{ end }}
+</div>

@@ -15,6 +15,11 @@
   color: #888;
   margin-bottom: 0.75rem;
 }
+.cp-key {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 0.5em;
+}
 .cp-swatches {
   display: flex;
   flex-wrap: wrap;
@@ -65,8 +70,9 @@
 
 <div class="cp-wrap">
 {{ range $palettes }}
+  {{ $p := . }}
   <div class="cp-palette">
-    {{ with .name }}<div class="cp-palette-name">{{ . }}</div>{{ end }}
+    {{ with .name }}<div class="cp-palette-name">{{ . }}{{ with $p.key }} <code class="cp-key">{{ . }}</code>{{ end }}</div>{{ end }}
     <div class="cp-swatches">
       {{ range .colors }}
       <div class="cp-swatch">
