@@ -34,3 +34,67 @@ single-hue maps on a white background). `ok_orchid` is the default `image.cmap` 
 33 samples of the table; the label gives the OKLab lightness at both ends.
 
 {{< colormaps >}}
+
+## Wide-gamut figures (Display P3)
+
+Everything above is sRGB. Current laptop and phone screens mostly show Display P3, a gamut that is about 25% larger
+than sRGB in the CIE 1976 *u′v′* diagram (36% in *xy*), and the greens, cyans and oranges that sRGB cannot reach are
+exactly where saturated colormaps live. PDF can hold colors in ICC-based spaces, but Matplotlib has no color
+management: all of its colors are just three numbers in [0, 1] that every backend takes as sRGB.
+
+[umbruch-matplotlib](https://github.com/manuel-rhdt/umbruch-matplotlib), my Matplotlib backend that renders figures
+to PDF with [umbruch](https://github.com/manuel-rhdt/umbruch), lets a figure say what its numbers mean. The support
+for color spaces is in a [pull request](https://github.com/manuel-rhdt/umbruch-matplotlib/pull/3) and not released yet.
+
+```python
+import matplotlib
+matplotlib.use("module://umbruch_matplotlib")
+import umbruch_matplotlib as hb
+
+hb.config.color_space = "display-p3"        # or fig.savefig(..., color_space="display-p3")
+ax.plot(x, y, color=(0.0, 1.0, 0.0))        # a P3 coordinate: the greenest green of the screen
+```
+
+From then on every RGB value in the figure is a P3 coordinate. Fills, strokes, text and hatches are written to the PDF
+as `color(display-p3 r g b)` straight from Matplotlib's floating-point values (not rounded to 1/255 through hex), and
+the pixels of `imshow` get the P3 ICC profile, so a colormap defined in P3 coordinates works too. The other spaces of
+CSS Color 4 (`a98-rgb`, `prophoto-rgb`, `rec2020`) are available the same way.
+
+The catch is that everything Matplotlib hands out as sRGB (color names, hex codes, the default cycle, the built-in
+colormaps, and the palettes on this page) is then misread as P3 numbers and comes out too saturated. Convert it:
+
+```python
+hb.convert_color("#EE7733", "srgb", "display-p3")     # an sRGB color as P3 numbers
+cmap = hb.convert_cmap("viridis", "srgb", "display-p3")
+```
+
+### Examples
+
+The first figure has six saturated P3 colors above the closest colors sRGB can show (the same colors clipped to the
+sRGB gamut and written back as P3 numbers), four lines in P3 colors, and two hue wheels: the `hsv` colormap read as P3
+numbers on the left, and `hsv` converted from sRGB on the right, which is what it looks like in an sRGB figure.
+
+<img src="/colors/wide_gamut_p3.png" alt="Display P3 figure with swatches, lines and two hue wheels" style="max-width: 100%;">
+
+The second is an `imshow` of the same data with a colormap whose anchors are P3 coordinates (255 of its 256 entries
+lie outside sRGB), next to the same colormap clipped to sRGB.
+
+<img src="/colors/wide_gamut_imshow.png" alt="imshow with a Display P3 colormap next to its sRGB clip" style="max-width: 100%;">
+
+<!-- plain <img> from static/: the files are copied unchanged, which keeps the embedded ICC profile -->
+
+These PNGs are previews of the PDFs with the Display P3 profile embedded. In a browser that color-manages images, on a
+P3 screen, the left panels and the top rows are visibly more vivid than the right and bottom ones; on an sRGB screen
+both look the same, because it clips. A viewer that ignores the profile shows the P3 numbers as sRGB, and the clipped
+versions then look washed out. The PDFs are the actual output:
+[wide_gamut_p3.pdf](/colors/wide_gamut_p3.pdf) ([script](/colors/wide_gamut_p3.py)) and
+[wide_gamut_imshow.pdf](/colors/wide_gamut_imshow.pdf) ([script](/colors/wide_gamut_imshow.py)). The previews come
+from [p3_preview.py](/colors/p3_preview.py): poppler renders with the P3 profile as the display profile and the PNG is
+tagged with it.
+
+### Limits
+
+- Raster images are 8 bits per channel, as Matplotlib makes them; flat colors are written with five decimals.
+- `shading="gouraud"` is not supported in a wide color space yet (umbruch paints meshes in sRGB), and raises.
+- Only PDF output is color-managed. Matplotlib's other backends still treat the numbers as sRGB, and I have not
+  looked at what happens when such a PDF is converted to CMYK for print.
