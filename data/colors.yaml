@@ -1,60 +1,33 @@
+# Colibri palettes: the numbers of rhdt-mpl (src/rhdt_mpl/spectral_data.py), Display P3 coordinates.
+# srgb: the same color gamut-mapped to sRGB (what an sRGB screen and draw.io get), css: the P3 color for
+# browsers that have color(), wide: the exact color where it lies outside Display P3.
 palettes:
 
-  - name: Tol — Bright
-    key: tol-bright
+  - name: Colibri
+    key: colibri
+    space: display-p3
     colors:
-      - { name: Blue,   hex: "#4477AA" }
-      - { name: Cyan,   hex: "#66CCEE" }
-      - { name: Green,  hex: "#228833" }
-      - { name: Yellow, hex: "#CCBB44" }
-      - { name: Red,    hex: "#EE6677" }
-      - { name: Purple, hex: "#AA3377" }
-      - { name: Grey,   hex: "#BBBBBB" }
+      - { name: Emerald, hex: "#00a543", srgb: "#00a050", css: "color(display-p3 0 0.6471 0.2627)", wide: "oklch(0.6187 0.2364 151.88)" }
+      - { name: Tourmaline, hex: "#d139bf", srgb: "#e322c5", css: "color(display-p3 0.8196 0.2235 0.749)" }
+      - { name: Amethyst, hex: "#4737e5", srgb: "#4a36ee", css: "color(display-p3 0.2784 0.2157 0.898)" }
+      - { name: Amber, hex: "#ba682c", srgb: "#c76314", css: "color(display-p3 0.7294 0.4078 0.1725)" }
+      - { name: Sapphire, hex: "#007ac1", srgb: "#007cb4", css: "color(display-p3 0 0.4784 0.7569)", wide: "oklch(0.5563 0.1832 238.53)" }
+      - { name: Ruby, hex: "#aa1742", srgb: "#b60042", css: "color(display-p3 0.6667 0.0902 0.2588)" }
+      - { name: Jade, hex: "#008479", srgb: "#008177", css: "color(display-p3 0 0.5176 0.4745)", wide: "oklch(0.5437 0.1601 184.45)" }
+      - { name: Peridot, hex: "#808c28", srgb: "#7d8c00", css: "color(display-p3 0.502 0.549 0.1569)" }
 
-  - name: Tol — Vibrant
-    key: tol-vibrant
+  - name: Colibri dark
+    key: colibri-dark
+    space: display-p3
     colors:
-      - { name: Orange,  hex: "#EE7733" }
-      - { name: Blue,    hex: "#0077BB" }
-      - { name: Cyan,    hex: "#33BBEE" }
-      - { name: Magenta, hex: "#EE3377" }
-      - { name: Red,     hex: "#CC3311" }
-      - { name: Teal,    hex: "#009988" }
-      - { name: Grey,    hex: "#BBBBBB" }
-
-  - name: Tol — Muted
-    key: tol-muted
-    colors:
-      - { name: Indigo,    hex: "#332288" }
-      - { name: Cyan,      hex: "#88CCEE" }
-      - { name: Teal,      hex: "#44AA99" }
-      - { name: Green,     hex: "#117733" }
-      - { name: Olive,     hex: "#999933" }
-      - { name: Sand,      hex: "#DDCC77" }
-      - { name: Rose,      hex: "#CC6677" }
-      - { name: Wine,      hex: "#882255" }
-      - { name: Purple,    hex: "#AA4499" }
-      - { name: Pale grey, hex: "#DDDDDD" }
-
-  - name: Tol — Pale
-    key: tol-pale
-    colors:
-      - { name: Pale blue,   hex: "#BBCCEE" }
-      - { name: Pale cyan,   hex: "#CCEEFF" }
-      - { name: Pale green,  hex: "#CCDDAA" }
-      - { name: Pale yellow, hex: "#EEEEBB" }
-      - { name: Pale red,    hex: "#FFCCCC" }
-      - { name: Pale grey,   hex: "#DDDDDD" }
-
-  - name: Tol — Dark
-    key: tol-dark
-    colors:
-      - { name: Dark blue,   hex: "#222255" }
-      - { name: Dark cyan,   hex: "#225555" }
-      - { name: Dark green,  hex: "#225522" }
-      - { name: Dark yellow, hex: "#666633" }
-      - { name: Dark red,    hex: "#663333" }
-      - { name: Dark grey,   hex: "#555555" }
+      - { name: Malachite, hex: "#3a822e", srgb: "#05841c", css: "color(display-p3 0.2275 0.5098 0.1804)" }
+      - { name: Rhodolite, hex: "#994b6f", srgb: "#a54570", css: "color(display-p3 0.6 0.2941 0.4353)" }
+      - { name: Iolite, hex: "#232a87", srgb: "#212a8c", css: "color(display-p3 0.1373 0.1647 0.5294)" }
+      - { name: Bronzite, hex: "#7c5028", srgb: "#844d1e", css: "color(display-p3 0.4863 0.3137 0.1569)" }
+      - { name: Lapis, hex: "#1842ce", srgb: "#0045d3", css: "color(display-p3 0.09412 0.2588 0.8078)" }
+      - { name: Garnet, hex: "#632520", srgb: "#6c1f1d", css: "color(display-p3 0.3882 0.1451 0.1255)" }
+      - { name: Apatite, hex: "#185662", srgb: "#005661", css: "color(display-p3 0.09412 0.3373 0.3843)" }
+      - { name: Serpentine, hex: "#42490d", srgb: "#404900", css: "color(display-p3 0.2588 0.2863 0.05098)" }
 
   - name: Okabe–Ito
     key: okabe-ito
