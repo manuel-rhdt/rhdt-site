@@ -15,6 +15,11 @@
   color: #888;
   margin-bottom: 0.75rem;
 }
+.cp-space {
+  margin-left: 0.5em;
+  font-size: 0.7rem;
+  color: #aaa;
+}
 .cp-key {
   text-transform: none;
   letter-spacing: 0;
@@ -72,11 +77,12 @@
 {{ range $palettes }}
   {{ $p := . }}
   <div class="cp-palette">
-    {{ with .name }}<div class="cp-palette-name">{{ . }}{{ with $p.key }} <code class="cp-key">{{ . }}</code>{{ end }}</div>{{ end }}
+    {{ with .name }}<div class="cp-palette-name">{{ . }}{{ with $p.key }} <code class="cp-key">{{ . }}</code>{{ end }}{{ with $p.space }} <span class="cp-space">{{ . }}</span>{{ end }}</div>{{ end }}
     <div class="cp-swatches">
       {{ range .colors }}
       <div class="cp-swatch">
-        <div class="cp-swatch-block" style="background-color: {{ .hex }};"></div>
+        {{/* sRGB first, then the same color for the browsers that know color() and oklch() */}}
+        <div class="cp-swatch-block" style="background-color: {{ with .srgb }}{{ . }}{{ else }}{{ .hex }}{{ end }};{{ with .css }} background-color: {{ . | safeCSS }};{{ end }}{{ with .wide }} background-color: {{ . | safeCSS }};{{ end }}" {{- with .wide }} title="exact color: {{ . }}"{{ end }}></div>
         <div class="cp-swatch-info">
           <div class="cp-swatch-name">{{ .name }}</div>
           <div class="cp-swatch-hex">{{ .hex }}</div>
