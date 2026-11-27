@@ -8,6 +8,11 @@ theme = 'minima'
 [markup.goldmark.renderer]
 unsafe= true
 
+# The theme styles code through the classes of Chroma (assets/sass/syntax.scss). Without
+# this, Hugo writes inline styles of its own default theme and the theme's CSS never applies.
+[markup.highlight]
+noClasses = false
+
 [params.author]
 name = "Manuel Reinhardt"
 slogon = ""

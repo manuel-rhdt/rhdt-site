@@ -102,3 +102,20 @@
     margin-top: 0.25rem;
   }
 }
+/* Code blocks scroll sideways instead of widening the page (a long line, like the
+   draw.io configuration of the colors post, used to make the whole page 66000 px wide). */
+.md pre,
+.chroma {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Inline code in justified text: as an inline block its spaces are not stretched to
+   justify the line (they were: "display-p3   r   g   b"). It can still wrap inside. */
+.md :not(pre) > code {
+  display: inline-block;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  vertical-align: baseline;
+}
